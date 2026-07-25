@@ -21,24 +21,31 @@ body{
     overflow:hidden;
     position:relative;
     background:
-        radial-gradient(circle at 10% 20%,rgba(189,215,255,.45),transparent 30%),
-        radial-gradient(circle at 90% 80%,rgba(198,220,255,.35),transparent 30%),
-        linear-gradient(135deg,#fbfcff,#eef4ff,#ffffff);
+        linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
+        url("assets/iit-main-building.jpg") center center/cover no-repeat fixed;
 }
 body::before{
     content:"";
     position:fixed;
-    inset:0;
-    background:url("assets/iit-main-building.jpg") center center/cover no-repeat;
-    opacity:0.12;          /* 3% visible = 97% transparent */
-    z-index:-2;
+    width:420px;
+    height:420px;
+    left:-120px;
+    top:-120px;
+    border-radius:50%;
+    background:rgba(175,205,255,.28);
+    filter:blur(90px);
+    z-index:-1;
 }
 body::after{
     content:"";
     position:fixed;
-    inset:0;
-    background:white;
-    opacity:0.25;          /* optional soft haze */
+    width:380px;
+    height:380px;
+    right:-120px;
+    bottom:-120px;
+    border-radius:50%;
+    background:rgba(195,220,255,.25);
+    filter:blur(90px);
     z-index:-1;
 }
 .card{
@@ -47,10 +54,10 @@ z-index:1;
 width:min(760px,92vw);
 padding:52px;
 border-radius:34px;
-background:rgba(255,255,255,.60);
-backdrop-filter:blur(24px);
--webkit-backdrop-filter:blur(24px);
-border:1px solid rgba(255,255,255,.85);
+background:rgba(255,255,255,.88);
+backdrop-filter:blur(30px);
+-webkit-backdrop-filter:blur(30px);
+border:1px solid rgba(255,255,255,.9);
 box-shadow:0 25px 60px rgba(30,50,90,.12);
 animation:fade .9s ease;
 }
