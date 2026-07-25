@@ -13,40 +13,33 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-    font-family: Inter, sans-serif;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-    position:relative;
-    background:
-        linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
-        url("assets/iit-main-building.jpg") center center/cover no-repeat fixed;
+font-family:Inter,sans-serif;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+background:
+radial-gradient(circle at 10% 20%,rgba(189,215,255,.45),transparent 30%),
+radial-gradient(circle at 90% 80%,rgba(198,220,255,.35),transparent 30%),
+linear-gradient(135deg,#fbfcff,#eef4ff,#ffffff);
+}
+body::before,body::after{
+content:"";
+position:absolute;
+border-radius:50%;
+filter:blur(80px);
+z-index:0;
 }
 body::before{
-    content:"";
-    position:fixed;
-    width:420px;
-    height:420px;
-    left:-120px;
-    top:-120px;
-    border-radius:50%;
-    background:rgba(175,205,255,.28);
-    filter:blur(90px);
-    z-index:-1;
+width:340px;height:340px;
+background:rgba(173,202,255,.30);
+left:-80px;top:-80px;
 }
 body::after{
-    content:"";
-    position:fixed;
-    width:380px;
-    height:380px;
-    right:-120px;
-    bottom:-120px;
-    border-radius:50%;
-    background:rgba(195,220,255,.25);
-    filter:blur(90px);
-    z-index:-1;
+width:300px;height:300px;
+background:rgba(205,220,255,.28);
+right:-70px;bottom:-70px;
 }
 .card{
 position:relative;
@@ -54,10 +47,10 @@ z-index:1;
 width:min(760px,92vw);
 padding:52px;
 border-radius:34px;
-background:rgba(255,255,255,.82);
-backdrop-filter:blur(28px);
--webkit-backdrop-filter:blur(28px);
-border:1px solid rgba(255,255,255,.9);
+background:rgba(255,255,255,.60);
+backdrop-filter:blur(24px);
+-webkit-backdrop-filter:blur(24px);
+border:1px solid rgba(255,255,255,.85);
 box-shadow:0 25px 60px rgba(30,50,90,.12);
 animation:fade .9s ease;
 }
